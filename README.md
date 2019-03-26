@@ -1,4 +1,4 @@
-## Natural Language Toolkit for Indian Languages
+## Natural Language Toolkit for Indian Languages (iNLTK)
 
 
 ### Installation
