@@ -8,8 +8,11 @@ pip install http://download.pytorch.org/whl/cpu/torch-1.0.0-cp36-cp36m-linux_x86
 pip install inltk
 ```
 
-The first command will install pytorch-cpu, which, as the name suggests,
- does not have cuda support.
+iNLTK runs on CPU and NOT on GPU, as is the desired behaviour for most
+of the Deep Learning models in production.
+
+The first command above will install pytorch-cpu, which, as the name suggests,
+ does not have cuda support. 
  
 
 ### Supported languages
