@@ -5,10 +5,10 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="inltk",
-    version="0.0.7",
+    version="0.0.8",
     author="Gaurav",
     author_email="contactgauravforwork@gmail.com",
-    description="NLTK for Indian Languages",
+    description="Natural Language Toolkit for Indian Languages (iNLTK)",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/goru001/inltk",

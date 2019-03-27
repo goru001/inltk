@@ -16,6 +16,11 @@ class LanguageTokenizer(BaseTokenizer):
         return self.sp.EncodeAsPieces(t)
 
 
+class AllLanguageTokenizer(LanguageTokenizer):
+    def __init__(self, lang: str):
+        LanguageTokenizer.__init__(self, lang)
+
+
 class SanskritTokenizer(LanguageTokenizer):
     def __init__(self, lang: str):
         LanguageTokenizer.__init__(self, lang)

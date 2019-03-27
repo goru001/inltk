@@ -1,7 +1,7 @@
 import asyncio
 from fastai.text import *
 from .config import LanguageCodes
-from .download_assets import setup_language, verify_language
+from .download_assets import setup_language, verify_language, check_all_languages_identifying_model
 from inltk.tokenizer import LanguageTokenizer
 from .const import tokenizer_special_cases
 
@@ -50,3 +50,18 @@ def tokenize(input: str, language_code: str):
     tok = LanguageTokenizer(language_code)
     output = tok.tokenizer(input)
     return output
+
+
+def identify_language(input: str):
+    asyncio.set_event_loop(asyncio.new_event_loop())
+    loop = asyncio.get_event_loop()
+    tasks = [asyncio.ensure_future(check_all_languages_identifying_model())]
+    done = loop.run_until_complete(asyncio.gather(*tasks))[0]
+    loop.close()
+    defaults.device = torch.device('cpu')
+    path = Path(__file__).parent
+    learn = load_learner(path / 'models' / 'all')
+    output = learn.predict(input)
+    return str(output[0])
+
+

@@ -14,6 +14,8 @@ of the Deep Learning models in production.
 The first command above will install pytorch-cpu, which, as the name suggests,
  does not have cuda support. 
  
+`Note: inltk is currently supported only on Linux with Python >= 3.6`
+ 
 
 ### Supported languages
 
