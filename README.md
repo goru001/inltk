@@ -1,5 +1,6 @@
 ## Natural Language Toolkit for Indian Languages (iNLTK)
 
+![Alt Text](inltk/static/inltk.gif)
 
 ### Installation
 
