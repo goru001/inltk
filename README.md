@@ -73,6 +73,12 @@ It has a default value of 0.8`
 ```bash
 from inltk.inltk import identify_language
 
+identify_language(text)
+
+// text --> string in one of the supported languages
+
+Example:
+
 >> identify_language('न्यायदर्शनम् भारतीयदर्शनेषु अन्यतमम्। वैदिकदर्शनेषु ')
 'sanskrit'
 
