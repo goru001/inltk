@@ -68,6 +68,16 @@ predict_next_words(text , n, '<code-of-language>')
 `Note: You can also pass a fourth parameter, randomness, to predict_next_words.
 It has a default value of 0.8`
 
+**Identify language**
+
+```bash
+from inltk.inltk import identify_language
+
+>> identify_language('न्यायदर्शनम् भारतीयदर्शनेषु अन्यतमम्। वैदिकदर्शनेषु ')
+'sanskrit'
+
+```
+
 #### Repositories containing models used in iNLTK
 
 | Language | Repository                                                      | Perplexity of Language model | Wikipedia Articles Dataset |   Classification accuracy   |     Classification Kappa score    |
