@@ -1,4 +1,4 @@
-## Natural Language Toolkit for Indian Languages (iNLTK)
+## Natural Language Toolkit for Sanskrit Languages (iNLTK)
 
 ![Alt Text](inltk/static/inltk.gif)
 
