@@ -1,5 +1,8 @@
 ## Natural Language Toolkit for Indic Languages (iNLTK)
 
+iNLTK aims to provide out of the box support for various NLP tasks 
+that an application developer might need for Indic languages.
+
 ![Alt Text](inltk/static/inltk.gif)
 
 ### Installation
@@ -9,7 +12,7 @@ pip install http://download.pytorch.org/whl/cpu/torch-1.0.0-cp36-cp36m-linux_x86
 pip install inltk
 ```
 
-iNLTK runs on CPU and NOT on GPU, as is the desired behaviour for most
+iNLTK runs on CPU, as is the desired behaviour for most
 of the Deep Learning models in production.
 
 The first command above will install pytorch-cpu, which, as the name suggests,
@@ -99,3 +102,38 @@ Example:
 |   Odia   | [NLP for Odia](https://github.com/goru001/nlp-for-odia)         |              ~27             |       17,781 articles      |  ~95 (News Classification)  |     ~92 (News Classification)     |
 |  Marathi | [NLP for Marathi](https://github.com/goru001/nlp-for-marathi)   |              ~18             |       85,537 articles      |  ~91 (News Classification)  |     ~84 (News Classification)     |
 |  Bengali | [NLP for Bengali](https://github.com/goru001/nlp-for-bengali)   |              ~41             |       72,374 articles      |  ~94 (News Classification)  |     ~92 (News Classification)     |
+
+
+#### Contributing
+
+**Add a new language support for iNLTK**
+
+If you would like to add support for language of your own choice to iNLTK,
+ please start with checking/raising a issue [here](https://github.com/goru001/inltk/issues)
+ 
+Please checkout the steps I'd [mentioned here for Telugu](https://github.com/goru001/inltk/issues/1)
+to begin with. They should be almost similar for other languages as well.
+
+**Improving models/Using models for your own research**
+
+If you would like to take iNLTK's models and refine them with your own 
+dataset or build your own custom models on top of it, please check out the 
+repositories in the above table for the language of your choice. The repositories above 
+contain links to datasets, pretrained models, classifiers and all of the code for that.
+
+#### What's next (and being worked upon)
+
+`Shout out if you want to help :)`
+
+* Add [Tamil](https://github.com/goru001/inltk/issues/2) and [Telugu](https://github.com/goru001/inltk/issues/1) support
+* Add NER for all the languages
+* Work on a unified model for all the languages
+
+
+#### What's next - (and NOT being worked upon)
+
+`Shout out if you want to lead :)`
+
+* Add Windows support
+
+
