@@ -104,7 +104,7 @@ Example:
 |  Bengali | [NLP for Bengali](https://github.com/goru001/nlp-for-bengali)   |              ~41             |       72,374 articles      |  ~94 (News Classification)  |     ~92 (News Classification)     |
 
 
-#### Contributing
+### Contributing
 
 **Add a new language support for iNLTK**
 
@@ -121,7 +121,7 @@ dataset or build your own custom models on top of it, please check out the
 repositories in the above table for the language of your choice. The repositories above 
 contain links to datasets, pretrained models, classifiers and all of the code for that.
 
-#### What's next (and being worked upon)
+### What's next (and being worked upon)
 
 `Shout out if you want to help :)`
 
@@ -130,7 +130,7 @@ contain links to datasets, pretrained models, classifiers and all of the code fo
 * Work on a unified model for all the languages
 
 
-#### What's next - (and NOT being worked upon)
+### What's next - (and NOT being worked upon)
 
 `Shout out if you want to lead :)`
 
