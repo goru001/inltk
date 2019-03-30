@@ -88,6 +88,24 @@ Example:
 
 ```
 
+**Remove foreign languages**
+
+```bash
+from inltk.inltk import remove_foreign_languages
+
+remove_foreign_languages(text, '<code-of-language>')
+
+// text --> string in one of the supported languages
+// <code-of-language> --> code of that language whose words you want to retain
+
+Example:
+
+>> remove_foreign_languages('विकिपीडिया सभी विषयों ਇੱਕ ਅਲੌਕਿਕ ਨਜ਼ਾਰਾ ਬੱਝਾ ਹੋਇਆ ਸਾਹਮਣੇ ਆ ਖਲੋਂਦਾ ਸੀ पर प्रामाणिक और 维基百科:关于中文维基百科 उपयोग, परिवर्तन 维基百科:关于中文维基百科', 'hi')
+['▁विकिपीडिया', '▁सभी', '▁विषयों', '▁', '<unk>', '▁', '<unk>', '▁', '<unk>', '▁', '<unk>', '▁', '<unk>', '▁', '<unk>', '▁', '<unk>', '▁', '<unk>', '▁', '<unk>', '▁पर', '▁प्रामाणिक', '▁और', '▁', '<unk>', ':', '<unk>', '▁उपयोग', ',', '▁परिवर्तन', '▁', '<unk>', ':', '<unk>']
+```
+
+Every word other than that of host language will become `<unk>` and `▁` signifies `space character`
+
 #### Repositories containing models used in iNLTK
 
 | Language | Repository                                                      | Perplexity of Language model | Wikipedia Articles Dataset |   Classification accuracy   |     Classification Kappa score    |

@@ -65,3 +65,10 @@ def identify_language(input: str):
     return str(output[0])
 
 
+def remove_foreign_languages(input: str, host_language_code: str):
+    check_input_language(host_language_code)
+    tok = LanguageTokenizer(host_language_code)
+    output = tok.remove_foreign_tokens(input)
+    return output
+
+
