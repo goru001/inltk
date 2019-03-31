@@ -139,12 +139,18 @@ dataset or build your own custom models on top of it, please check out the
 repositories in the above table for the language of your choice. The repositories above 
 contain links to datasets, pretrained models, classifiers and all of the code for that.
 
+**Add new functionality**
+
+If you wish for a particular functionality in iNLTK - Start by checking/raising a issue [here](https://github.com/goru001/inltk/issues)
+
 ### What's next (and being worked upon)
 
 `Shout out if you want to help :)`
 
 * Add [Tamil](https://github.com/goru001/inltk/issues/2) and [Telugu](https://github.com/goru001/inltk/issues/1) support
+* Add function to get_embeddings_for_words, get_embeddings_for_sentences
 * Add NER for all the languages
+* Add translations - to and from languages in iNLTK + English
 * Work on a unified model for all the languages
 
 
