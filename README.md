@@ -1,5 +1,7 @@
 ## Natural Language Toolkit for Indic Languages (iNLTK)
 
+[![Gitter](https://badges.gitter.im/inltk/community.svg)](https://gitter.im/inltk/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 iNLTK aims to provide out of the box support for various NLP tasks 
 that an application developer might need for Indic languages.
 
