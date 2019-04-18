@@ -106,6 +106,10 @@ Example:
 
 Every word other than that of host language will become `<unk>` and `▁` signifies `space character`
 
+Checkout [this notebook](https://drive.google.com/file/d/0B3K0rqnCfC9pbVpSWk9Ndm5raGRCdjV6cGxVN1BGWFhTTlA0/view?usp=sharing)
+ by [Amol Mahajan](https://www.linkedin.com/in/amolmahajan0804/) where he uses iNLTK to remove foreign characters from
+ [iitb_en_hi_parallel corpus](http://www.cfilt.iitb.ac.in/iitb_parallel/iitb_corpus_download/)
+
 #### Repositories containing models used in iNLTK
 
 | Language | Repository                                                      | Perplexity of Language model | Wikipedia Articles Dataset |   Classification accuracy   |     Classification Kappa score    |
@@ -159,5 +163,11 @@ If you wish for a particular functionality in iNLTK - Start by checking/raising 
 `Shout out if you want to lead :)`
 
 * Add Windows support
+
+### Appreciation for iNLTK 
+
+* [By Jeremy Howard on Twitter](https://twitter.com/jeremyphoward/status/1111318198891110402)
+* [By Vincent Boucher on LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:6517137647310241792/)
+* [By Kanimozhi](https://www.linkedin.com/feed/update/urn:li:activity:6517277916030701568), [By Soham](https://www.linkedin.com/feed/update/urn:li:activity:6513084638955696128) on LinkedIn
 
 
