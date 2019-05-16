@@ -72,3 +72,7 @@ def remove_foreign_languages(input: str, host_language_code: str):
     return output
 
 
+def reset_language_identifying_models():
+    path = Path(__file__).parent
+    shutil.rmtree(path / 'models' / 'all')
+    return

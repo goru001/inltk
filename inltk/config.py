@@ -1,4 +1,4 @@
-class LanguageCodes(object):
+class LanguageCodes:
     bengali = 'bn'
     gujarati = 'gu'
     hindi = 'hi'
@@ -9,14 +9,15 @@ class LanguageCodes(object):
     odia = 'or'
     panjabi = 'pa'
     sanskrit = 'sa'
+    tamil = 'ta'
 
     def get_all_language_codes(self):
         return [self.bengali, self.gujarati, self.hindi,
                 self.kannada, self.malyalam, self.marathi,
-                self.nepali, self.odia, self.panjabi, self.sanskrit]
+                self.nepali, self.odia, self.panjabi, self.sanskrit, self.tamil]
 
 
-class LMConfigs(object):
+class LMConfigs:
     all_language_codes = LanguageCodes()
     lm_model_file_url = {
         all_language_codes.bengali: 'https://www.dropbox.com/s/4berhstpw836kcw/export.pkl?raw=1',
@@ -28,7 +29,8 @@ class LMConfigs(object):
         all_language_codes.nepali: 'https://www.dropbox.com/s/koxiy7l3zbkgzn6/export.pkl?raw=1',
         all_language_codes.odia: 'https://www.dropbox.com/s/dl3t6sp8p3ifp4q/export.pkl?raw=1',
         all_language_codes.panjabi: 'https://www.dropbox.com/s/ejiv5pdsi2mhhxa/export.pkl?raw=1',
-        all_language_codes.sanskrit: 'https://www.dropbox.com/s/4ay1by5ryz6k39l/sanskrit_export.pkl?raw=1'
+        all_language_codes.sanskrit: 'https://www.dropbox.com/s/4ay1by5ryz6k39l/sanskrit_export.pkl?raw=1',
+        all_language_codes.tamil: 'https://www.dropbox.com/s/88klv70zl82u39b/export.pkl?raw=1'
     }
     tokenizer_model_file_url = {
         all_language_codes.bengali: 'https://www.dropbox.com/s/29h7vqme1kb8pmw/bengali_lm.model?raw=1',
@@ -40,7 +42,8 @@ class LMConfigs(object):
         all_language_codes.nepali: 'https://www.dropbox.com/s/kmpc8i3c3n0if23/nepali_lm.model?raw=1',
         all_language_codes.odia: 'https://www.dropbox.com/s/1xnibv1sytgt9ci/oriya_lm.model?raw=1',
         all_language_codes.panjabi: 'https://www.dropbox.com/s/jxwr9ytn0zfzulc/panjabi_lm.model?raw=1',
-        all_language_codes.sanskrit: 'https://www.dropbox.com/s/e13401nsekulq17/tokenizer.model?raw=1'
+        all_language_codes.sanskrit: 'https://www.dropbox.com/s/e13401nsekulq17/tokenizer.model?raw=1',
+        all_language_codes.tamil: 'https://www.dropbox.com/s/jpg4kaqyfb71g1v/tokenizer.model?raw=1'
     }
 
     def __init__(self, language_code: str):
