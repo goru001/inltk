@@ -2,3 +2,5 @@ build/*
 dist/*
 inltk.egg-info/*
 inltk/models/*
+.idea/
+inltk/__pycache__
