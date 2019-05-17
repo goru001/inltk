@@ -76,3 +76,20 @@ def reset_language_identifying_models():
     path = Path(__file__).parent
     shutil.rmtree(path / 'models' / 'all')
     return
+
+
+def get_embedding_vectors(input: str, language_code: str):
+    check_input_language(language_code)
+    tok = LanguageTokenizer(language_code)
+    token_ids = tok.numericalize(input)
+    # get learner
+    defaults.device = torch.device('cpu')
+    path = Path(__file__).parent
+    learn = load_learner(path / 'models' / f'{language_code}')
+    encoder = get_model(learn.model)[0]
+    embeddings = encoder.state_dict()['encoder.weight']
+    embeddings = np.array(embeddings)
+    embedding_vectors = []
+    for token in token_ids:
+        embedding_vectors.append(embeddings[token])
+    return embedding_vectors

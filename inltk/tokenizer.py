@@ -15,6 +15,9 @@ class LanguageTokenizer(BaseTokenizer):
     def tokenizer(self, t: str) -> List[str]:
         return self.sp.EncodeAsPieces(t)
 
+    def numericalize(self, t: str) -> List[int]:
+        return self.sp.EncodeAsIds(t)
+
     def remove_foreign_tokens(self, t: str):
         local_pieces = []
         for i in self.sp.EncodeAsIds(t):
