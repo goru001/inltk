@@ -37,6 +37,7 @@ The first command above will install pytorch-cpu, which, as the name suggests,
 |   Odia   |  or  |
 |  Marathi |  mr  |
 |  Bengali |  bn  |
+|   Tamil  |  ta  |
 
 ### Usage
 
@@ -76,9 +77,13 @@ It has a default value of 0.8`
 
 **Identify language**
 
-```bash
-from inltk.inltk import identify_language
+Note: If you update the version of iNLTK, you need to run 
+`reset_language_identifying_models` before identifying language.
 
+```bash
+from inltk.inltk import identify_language, reset_language_identifying_models
+
+reset_language_identifying_models() # only if you've updated iNLTK version
 identify_language(text)
 
 // text --> string in one of the supported languages
@@ -126,7 +131,7 @@ Checkout [this notebook](https://drive.google.com/file/d/0B3K0rqnCfC9pbVpSWk9Ndm
 |   Odia   | [NLP for Odia](https://github.com/goru001/nlp-for-odia)         |              ~27             |       17,781 articles      |  ~95 (News Classification)  |     ~92 (News Classification)     |
 |  Marathi | [NLP for Marathi](https://github.com/goru001/nlp-for-marathi)   |              ~18             |       85,537 articles      |  ~91 (News Classification)  |     ~84 (News Classification)     |
 |  Bengali | [NLP for Bengali](https://github.com/goru001/nlp-for-bengali)   |              ~41             |       72,374 articles      |  ~94 (News Classification)  |     ~92 (News Classification)     |
-
+|   Tamil  | [NLP for Tamil](https://github.com/goru001/nlp-for-tamil)       |              ~20             |       >127,000 articles    |  ~97 (News Classification)  |     ~95 (News Classification)     |
 
 ### Contributing
 
