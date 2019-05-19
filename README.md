@@ -186,9 +186,10 @@ If you wish for a particular functionality in iNLTK - Start by checking/raising 
 
 `Shout out if you want to help :)`
 
-* Add [Tamil](https://github.com/goru001/inltk/issues/2) and [Telugu](https://github.com/goru001/inltk/issues/1) support
-* Add function to get_embeddings_for_words, get_embeddings_for_sentences
-* Add NER for all the languages
+* Add [Telugu](https://github.com/goru001/inltk/issues/1), [Urdu](https://github.com/goru001/inltk/issues/10) 
+and [Maithili](https://github.com/goru001/inltk/issues/10) support
+* Add NER support
+* Add Textual Entailment support
 * Add translations - to and from languages in iNLTK + English
 * Work on a unified model for all the languages
 
