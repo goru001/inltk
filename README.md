@@ -24,8 +24,8 @@ The first command above will install pytorch-cpu, which, as the name suggests,
 
 ### Intallation on windows (experimental)
 ```bash
-pip3 install https://download.pytorch.org/whl/cpu/torch-1.1.0-cp36-cp36m-win_amd64.whl
-pip3 install torchvision
+pip install https://download.pytorch.org/whl/cpu/torch-1.1.0-cp36-cp36m-win_amd64.whl
+pip install torchvision
 pip install inltk
 ```
 
