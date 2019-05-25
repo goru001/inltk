@@ -83,3 +83,8 @@ class PanjabiTokenizer(LanguageTokenizer):
 class TamilTokenizer(LanguageTokenizer):
     def __init__(self, lang: str):
         LanguageTokenizer.__init__(self, lang)
+
+
+class UrduTokenizer(LanguageTokenizer):
+    def __init__(self, lang: str):
+        LanguageTokenizer.__init__(self, lang)
