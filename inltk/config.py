@@ -10,13 +10,11 @@ class LanguageCodes:
     panjabi = 'pa'
     sanskrit = 'sa'
     tamil = 'ta'
-    urdu = 'ur'
 
     def get_all_language_codes(self):
         return [self.bengali, self.gujarati, self.hindi,
                 self.kannada, self.malyalam, self.marathi,
-                self.nepali, self.odia, self.panjabi,
-                self.sanskrit, self.tamil, self.urdu]
+                self.nepali, self.odia, self.panjabi, self.sanskrit, self.tamil]
 
 
 class LMConfigs:
@@ -32,8 +30,7 @@ class LMConfigs:
         all_language_codes.odia: 'https://www.dropbox.com/s/dl3t6sp8p3ifp4q/export.pkl?raw=1',
         all_language_codes.panjabi: 'https://www.dropbox.com/s/ejiv5pdsi2mhhxa/export.pkl?raw=1',
         all_language_codes.sanskrit: 'https://www.dropbox.com/s/4ay1by5ryz6k39l/sanskrit_export.pkl?raw=1',
-        all_language_codes.tamil: 'https://www.dropbox.com/s/88klv70zl82u39b/export.pkl?raw=1',
-        all_language_codes.urdu: 'https://www.dropbox.com/s/0ovetjk27np0fcz/urdu_export.pkl?raw=1'
+        all_language_codes.tamil: 'https://www.dropbox.com/s/88klv70zl82u39b/export.pkl?raw=1'
     }
     tokenizer_model_file_url = {
         all_language_codes.bengali: 'https://www.dropbox.com/s/29h7vqme1kb8pmw/bengali_lm.model?raw=1',
@@ -46,8 +43,7 @@ class LMConfigs:
         all_language_codes.odia: 'https://www.dropbox.com/s/1xnibv1sytgt9ci/oriya_lm.model?raw=1',
         all_language_codes.panjabi: 'https://www.dropbox.com/s/jxwr9ytn0zfzulc/panjabi_lm.model?raw=1',
         all_language_codes.sanskrit: 'https://www.dropbox.com/s/e13401nsekulq17/tokenizer.model?raw=1',
-        all_language_codes.tamil: 'https://www.dropbox.com/s/jpg4kaqyfb71g1v/tokenizer.model?raw=1',
-        all_language_codes.urdu: 'https://www.dropbox.com/s/m5l1yy41ij6vwxa/urdu_lm.model?raw=1'
+        all_language_codes.tamil: 'https://www.dropbox.com/s/jpg4kaqyfb71g1v/tokenizer.model?raw=1'
     }
 
     def __init__(self, language_code: str):
