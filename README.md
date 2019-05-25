@@ -21,7 +21,12 @@ The first command above will install pytorch-cpu, which, as the name suggests,
  does not have cuda support. 
  
 `Note: inltk is currently supported only on Linux with Python >= 3.6`
- 
+
+### Intallation on windows (experimental)
+```bash
+pip install https://download.pytorch.org/whl/cpu/torch-1.1.0-cp36-cp36m-win_amd64.whl
+pip install inltk
+```
 
 ### Supported languages
 
