@@ -7,10 +7,16 @@ that an application developer might need for Indic languages.
 
 ![Alt Text](inltk/static/inltk.gif)
 
-### Installation
+### Installation on Linux
 
 ```bash
 pip install http://download.pytorch.org/whl/cpu/torch-1.0.0-cp36-cp36m-linux_x86_64.whl
+pip install inltk
+``` 
+
+### Installation on Windows 10 (experimental)
+```bash
+pip install https://download.pytorch.org/whl/cpu/torch-1.1.0-cp36-cp36m-win_amd64.whl
 pip install inltk
 ```
 
@@ -18,15 +24,9 @@ iNLTK runs on CPU, as is the desired behaviour for most
 of the Deep Learning models in production.
 
 The first command above will install pytorch-cpu, which, as the name suggests,
- does not have cuda support. 
- 
-`Note: inltk is currently supported only on Linux with Python >= 3.6`
+ does not have cuda support.
 
-### Installation on windows (experimental)
-```bash
-pip install https://download.pytorch.org/whl/cpu/torch-1.1.0-cp36-cp36m-win_amd64.whl
-pip install inltk
-```
+`Note: inltk is currently supported only on Linux and Windows 10 with Python >= 3.6`
 
 ### Supported languages
 
@@ -193,19 +193,20 @@ If you wish for a particular functionality in iNLTK - Start by checking/raising 
 
 `Shout out if you want to help :)`
 
-* Add [Telugu](https://github.com/goru001/inltk/issues/1), [Urdu](https://github.com/goru001/inltk/issues/10) 
+* Add [Telugu](https://github.com/goru001/inltk/issues/1) 
 and [Maithili](https://github.com/goru001/inltk/issues/10) support
 * Add NER support
 * Add Textual Entailment support
-* Add translations - to and from languages in iNLTK + English
-* Work on a unified model for all the languages
+* Add English to iNLTK
 
 
 ### What's next - (and NOT being worked upon)
 
 `Shout out if you want to lead :)`
 
-* Add Windows support
+* Work on a [unified model for all the languages](https://github.com/goru001/inltk/issues/14)
+* [POS support](https://github.com/goru001/inltk/issues/13) in iNLTK
+* Add translations - to and from languages in iNLTK + English
 
 ### Appreciation for iNLTK 
 
