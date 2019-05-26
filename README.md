@@ -43,6 +43,7 @@ pip install inltk
 |  Marathi |  mr  |
 |  Bengali |  bn  |
 |   Tamil  |  ta  |
+|   Urdu  |  ur  |
 
 ### Usage
 
@@ -165,6 +166,7 @@ Checkout [this notebook](https://drive.google.com/file/d/0B3K0rqnCfC9pbVpSWk9Ndm
 |  Marathi | [NLP for Marathi](https://github.com/goru001/nlp-for-marathi)   |              ~18             |       85,537 articles      |  ~91 (News Classification)  |     ~84 (News Classification)     |
 |  Bengali | [NLP for Bengali](https://github.com/goru001/nlp-for-bengali)   |              ~41             |       72,374 articles      |  ~94 (News Classification)  |     ~92 (News Classification)     |
 |   Tamil  | [NLP for Tamil](https://github.com/goru001/nlp-for-tamil)       |              ~20             |       >127,000 articles    |  ~97 (News Classification)  |     ~95 (News Classification)     |
+|   Urdu  | [NLP for Urdu](https://github.com/anuragshas/nlp-for-urdu)       |              ~13             |       >150,000 articles    |  ~94 (News Classification)  |     ~90 (News Classification)     |
 
 ### Contributing
 

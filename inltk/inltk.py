@@ -39,6 +39,7 @@ def predict_next_words(input: str, n_words: int, language_code: str, randomness=
     path = Path(__file__).parent
     learn = load_learner(path / 'models' / f'{language_code}')
     output = learn.predict(input, n_words, randomness)
+    # UTF-8 encoding takes care of both LTR and RTL languages
     output = input + (''.join(output.replace(input, '').split(' '))).replace('▁', ' ')
     for special_str in tokenizer_special_cases:
         output = output.replace(special_str, '\n')
