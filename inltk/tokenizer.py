@@ -55,7 +55,7 @@ class KannadaTokenizer(LanguageTokenizer):
         LanguageTokenizer.__init__(self, lang)
 
 
-class MalyalamTokenizer(LanguageTokenizer):
+class MalayalamTokenizer(LanguageTokenizer):
     def __init__(self, lang: str):
         LanguageTokenizer.__init__(self, lang)
 
