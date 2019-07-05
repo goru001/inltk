@@ -212,6 +212,6 @@ and [Maithili](https://github.com/goru001/inltk/issues/10) support
 
 * [By Jeremy Howard on Twitter](https://twitter.com/jeremyphoward/status/1111318198891110402)
 * [By Vincent Boucher on LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:6517137647310241792/)
-* [By Kanimozhi](https://www.linkedin.com/feed/update/urn:li:activity:6517277916030701568), [By Soham](https://www.linkedin.com/feed/update/urn:li:activity:6513084638955696128) on LinkedIn
+* [By Kanimozhi](https://www.linkedin.com/feed/update/urn:li:activity:6517277916030701568), [By Soham](https://www.linkedin.com/feed/update/urn:li:activity:6513084638955696128), [By Imaad](https://www.linkedin.com/feed/update/urn:li:activity:6536258026687557632/),  on LinkedIn
 
 
