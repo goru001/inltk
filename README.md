@@ -216,6 +216,6 @@ and [Maithili](https://github.com/goru001/inltk/issues/10) support
 * iNLTK was [trending on GitHub](https://github.motakasoft.com/trending/ranking/monthly/?d=2019-05-01&l=python&page=2) in May 2019
 * iNLTK has had [11,000+ Downloads](
 https://console.cloud.google.com/bigquery?sq=375816891401:185fda81bdc64eb79b98c6b28c77a62a
-) till June.
+) till June 2019
 
 
