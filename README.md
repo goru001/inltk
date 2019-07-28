@@ -90,10 +90,9 @@ Example:
 >> len(vectors)
 8
 
-```
+``` 
 
-To get a feel of embeddings, checkout
- [this visualization of subset of Hindi Embedding vectors](https://projector.tensorflow.org/?config=https://raw.githubusercontent.com/goru001/nlp-for-hindi/master/language-model/embedding_projector_config.json)
+Links to `Embedding visualization` on [Embedding projector](https://projector.tensorflow.org/) for all the supported languages are given in table below. 
 
 **Predict Next 'n' words**
 
