@@ -13,8 +13,8 @@ path = Path(__file__).parent
 async def download_file(url, dest, fname):
     if (dest/f'{fname}').exists(): return False
     os.makedirs(dest, exist_ok=True)
-    print('Downloading Model... This might take time, depending on your internet connection! Please have patience!'
-          'Don\'t worry, we\'ll only do this for the first time :)')
+    print('Downloading Model. This might take time, depending on your internet connection. Please be patient.\n'
+          'We\'ll only do this for the first time.')
     async with aiohttp.ClientSession() as session:
         async with session.get(url) as response:
             data = await response.read()

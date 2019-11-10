@@ -10,21 +10,17 @@ that an application developer might need for Indic languages.
 ### Installation on Linux
 
 ```bash
-pip install http://download.pytorch.org/whl/cpu/torch-1.0.0-cp36-cp36m-linux_x86_64.whl
+pip install torch==1.3.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
 pip install inltk
 ``` 
 
-### Installation on Windows 10 (experimental)
-```bash
-pip install https://download.pytorch.org/whl/cpu/torch-1.1.0-cp36-cp36m-win_amd64.whl
-pip install inltk
-```
+Note: Just make sure to pick the correct torch wheel url, according to the needed 
+platform and python version, which you will find [here](https://pytorch.org/get-started/locally/#pip-1).
 
 iNLTK runs on CPU, as is the desired behaviour for most
 of the Deep Learning models in production.
 
-The first command above will install pytorch-cpu, which, as the name suggests,
- does not have cuda support.
+The first command above will install pytorch for cpu, which, as the name suggests, does not have cuda support.
 
 `Note: inltk is currently supported only on Linux and Windows 10 with Python >= 3.6`
 
@@ -166,7 +162,7 @@ Example:
 ```
 
 `get_sentence_encoding` returns 400 dimensional encoding of the sentence from
-ULMFiT LM Encoder trained in repositories linked below.
+ULMFiT LM Encoder of `<code-of-language>` trained in repositories linked below.
 
 
 **Get Sentence Similarity**
@@ -257,6 +253,6 @@ and [Maithili](https://github.com/goru001/inltk/issues/10) support
 * iNLTK was [trending on GitHub](https://github.motakasoft.com/trending/ranking/monthly/?d=2019-05-01&l=python&page=2) in May 2019
 * iNLTK has had [17,000+ Downloads](
 https://console.cloud.google.com/bigquery?sq=375816891401:185fda81bdc64eb79b98c6b28c77a62a
-) till Nov, 2019
+) till Nov 2019
 
 

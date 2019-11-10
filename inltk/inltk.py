@@ -4,7 +4,7 @@ from .config import LanguageCodes
 from .download_assets import setup_language, verify_language, check_all_languages_identifying_model
 from inltk.tokenizer import LanguageTokenizer
 from .const import tokenizer_special_cases
-from inltk.utils import cos_sim
+from inltk.utils import cos_sim, reset_models
 
 lcodes = LanguageCodes()
 all_language_codes = lcodes.get_all_language_codes()
@@ -75,9 +75,7 @@ def remove_foreign_languages(input: str, host_language_code: str):
 
 
 def reset_language_identifying_models():
-    path = Path(__file__).parent
-    shutil.rmtree(path / 'models' / 'all')
-    return
+    reset_models('all')
 
 
 def get_embedding_vectors(input: str, language_code: str):
