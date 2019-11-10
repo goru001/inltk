@@ -4,6 +4,7 @@ from .config import LanguageCodes
 from .download_assets import setup_language, verify_language, check_all_languages_identifying_model
 from inltk.tokenizer import LanguageTokenizer
 from .const import tokenizer_special_cases
+from inltk.utils import cos_sim
 
 lcodes = LanguageCodes()
 all_language_codes = lcodes.get_all_language_codes()
@@ -94,3 +95,23 @@ def get_embedding_vectors(input: str, language_code: str):
     for token in token_ids:
         embedding_vectors.append(embeddings[token])
     return embedding_vectors
+
+
+def get_sentence_encoding(input: str, language_code: str):
+    check_input_language(language_code)
+    tok = LanguageTokenizer(language_code)
+    token_ids = tok.numericalize(input)
+    # get learner
+    defaults.device = torch.device('cpu')
+    path = Path(__file__).parent
+    learn = load_learner(path / 'models' / f'{language_code}')
+    m = learn.model
+    kk0 = m[0](Tensor([token_ids]).to(torch.int64))
+    return np.array(kk0[0][-1][0][-1])
+
+
+def get_sentence_similarity(sen1: str, sen2: str, language_code: str, cmp: Callable = cos_sim):
+    check_input_language(language_code)
+    enc1 = get_sentence_encoding(sen1, language_code)
+    enc2 = get_sentence_encoding(sen2, language_code)
+    return cmp(enc1, enc2)

@@ -41,7 +41,7 @@ setuptools.setup(
         "scipy",
         "spacy>=2.0.18",
         "typing",
-        'fastai==1.0.50.post1',
+        'fastai==1.0.57',
         "sentencepiece"
     ],
 )

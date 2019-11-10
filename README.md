@@ -149,6 +149,49 @@ Every word other than that of host language will become `<unk>` and `▁` signif
 Checkout [this notebook](https://drive.google.com/file/d/0B3K0rqnCfC9pbVpSWk9Ndm5raGRCdjV6cGxVN1BGWFhTTlA0/view?usp=sharing)
  by [Amol Mahajan](https://www.linkedin.com/in/amolmahajan0804/) where he uses iNLTK to remove foreign characters from
  [iitb_en_hi_parallel corpus](http://www.cfilt.iitb.ac.in/iitb_parallel/iitb_corpus_download/)
+ 
+ 
+ **Get Sentence Encoding**
+ 
+```
+from inltk.inltk import get_sentence_encoding
+
+get_sentence_encoding(text, '<code-of-language>')
+
+Example: 
+
+>> encoding = get_sentence_encoding('मुझे अपने देश से', 'hi')
+>> encoding.shape
+(400,)
+```
+
+`get_sentence_encoding` returns 400 dimensional encoding of the sentence from
+ULMFiT LM Encoder trained in repositories linked below.
+
+
+**Get Sentence Similarity**
+
+```
+from inltk.inltk import get_sentence_similarity
+
+get_sentence_similarity(sentence1, sentence2, '<code-of-language>', cmp = cos_sim)
+
+// sentence1, sentence2 are strings in '<code-of-language>'
+// similarity of encodings is calculated by using cmp function whose default is cosine similarity
+
+Example: 
+
+>> get_sentence_similarity('मैं इन दोनों श्रेणियों के बीच कुछ भी सामान्य नहीं देखता।', 'मैंने कन्फेक्शनरी स्टोर्स पर सेब और संतरे की कीमतों की तुलना की', 'hi')
+0.126698300242424
+
+>> get_sentence_similarity('मैं इन दोनों श्रेणियों के बीच कुछ भी सामान्य नहीं देखता।', 'यहां कोई तुलना नहीं है। आप सेब की तुलना संतरे से कर रहे हैं', 'hi')
+0.25467658042907715
+```
+
+`get_sentence_similarity` returns similarity between two sentences by calculating
+`cosine similarity` (default comparison function) between the encoding vectors of two
+sentences.
+
 
 #### Repositories containing models used in iNLTK
 |  Language | Repository                                                       | Perplexity of Language model | Wikipedia Articles Dataset |   Classification accuracy   |     Classification Kappa score    |                                                     Embeddings visualization on [Embedding projector](https://projector.tensorflow.org/)                                                     |
@@ -212,8 +255,8 @@ and [Maithili](https://github.com/goru001/inltk/issues/10) support
 * [By Vincent Boucher on LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:6517137647310241792/)
 * [By Kanimozhi](https://www.linkedin.com/feed/update/urn:li:activity:6517277916030701568), [By Soham](https://www.linkedin.com/feed/update/urn:li:activity:6513084638955696128), [By Imaad](https://www.linkedin.com/feed/update/urn:li:activity:6536258026687557632/) on LinkedIn
 * iNLTK was [trending on GitHub](https://github.motakasoft.com/trending/ranking/monthly/?d=2019-05-01&l=python&page=2) in May 2019
-* iNLTK has had [11,000+ Downloads](
+* iNLTK has had [17,000+ Downloads](
 https://console.cloud.google.com/bigquery?sq=375816891401:185fda81bdc64eb79b98c6b28c77a62a
-) till June 2019
+) till Nov, 2019
 
 
