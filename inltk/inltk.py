@@ -118,6 +118,7 @@ def get_sentence_similarity(sen1: str, sen2: str, language_code: str, cmp: Calla
 
 
 def get_similar_sentences(sen: str, no_of_variations: int, language_code: str):
+    check_input_language(language_code)
     # get embedding vectors for sen
     tok = LanguageTokenizer(language_code)
     token_ids = tok.numericalize(sen)
