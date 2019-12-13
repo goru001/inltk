@@ -2,10 +2,56 @@ from fastai.text import *
 import sentencepiece as spm
 from pathlib import Path
 
+from inltk.config import LanguageCodes
+
 path = Path(__file__).parent
 
 
 class LanguageTokenizer(BaseTokenizer):
+    def __init__(self, lang: str):
+        self.lang = lang
+        self.base = EnglishTokenizer(lang) if lang == LanguageCodes.english else IndicTokenizer(lang)
+
+    def tokenizer(self, t: str) -> List[str]:
+        return self.base.tokenizer(t)
+
+    def numericalize(self, t: str) -> List[int]:
+        return self.base.numericalize(t)
+
+    def textify(self, ids: List[int]) -> str:
+        return self.base.textify(ids)
+
+    def remove_foreign_tokens(self, t: str):
+        return self.base.remove_foreign_tokens(t)
+
+
+# Because we're using spacy tokenizer for english and sentence-piece for other languages
+class EnglishTokenizer(BaseTokenizer):
+    def __init__(self, lang: str):
+        super().__init__(lang)
+        self.lang = lang
+        with open(path / f'models/{lang}/vocab.pkl', 'rb') as f:
+            self.vocab = Vocab(pickle.load(f))
+        self.tok = SpacyTokenizer(lang)
+
+    def tokenizer(self, t: str) -> List[str]:
+        return self.tok.tokenizer(t)
+
+    def numericalize(self, t: str):
+        token_ids = self.tokenizer(t)
+        return self.vocab.numericalize(token_ids)
+
+    def textify(self, ids: List[int]):
+        return self.vocab.textify(ids)
+
+    def remove_foreign_tokens(self, t: str):
+        local_pieces = []
+        for i in self.numericalize(t):
+            local_pieces.append(self.textify([i]))
+        return local_pieces
+
+
+class IndicTokenizer(BaseTokenizer):
     def __init__(self, lang: str):
         self.lang = lang
         self.sp = spm.SentencePieceProcessor()
@@ -26,7 +72,6 @@ class LanguageTokenizer(BaseTokenizer):
         for i in self.sp.EncodeAsIds(t):
             local_pieces.append(self.sp.IdToPiece(i))
         return local_pieces
-
 
 class AllLanguageTokenizer(LanguageTokenizer):
     def __init__(self, lang: str):

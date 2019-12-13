@@ -43,7 +43,8 @@ def predict_next_words(input: str, n_words: int, language_code: str, randomness=
     learn = load_learner(path / 'models' / f'{language_code}')
     output = learn.predict(input, n_words, randomness)
     # UTF-8 encoding takes care of both LTR and RTL languages
-    output = input + (''.join(output.replace(input, '').split(' '))).replace('▁', ' ')
+    if language_code != LanguageCodes.english:
+        output = input + (''.join(output.replace(input, '').split(' '))).replace('▁', ' ')
     for special_str in tokenizer_special_cases:
         output = output.replace(special_str, '\n')
     return output
@@ -105,8 +106,9 @@ def get_sentence_encoding(input: str, language_code: str):
     defaults.device = torch.device('cpu')
     path = Path(__file__).parent
     learn = load_learner(path / 'models' / f'{language_code}')
-    m = learn.model
-    kk0 = m[0](Tensor([token_ids]).to(torch.int64))
+    awd_lstm = learn.model[0]
+    awd_lstm.reset()
+    kk0 = awd_lstm(Tensor([token_ids]).to(torch.int64))
     return np.array(kk0[0][-1][0][-1])
 
 
