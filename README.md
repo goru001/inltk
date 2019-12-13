@@ -189,6 +189,33 @@ Example:
 sentences.
 
 
+**Get Similar Sentences**
+
+```
+from inltk.inltk import get_similar_sentences
+
+get_similar_sentences(sentence, no_of_variants, '<code-of-language>')
+
+
+Example:
+
+>> get_similar_sentences('मैं आज बहुत खुश हूं', 10, 'hi')
+['मैं आजकल बहुत खुश हूं',
+ 'मैं आज काफ़ी खुश हूं',
+ 'मैं आज काफी खुश हूं',
+ 'मैं अब बहुत खुश हूं',
+ 'मैं आज अत्यधिक खुश हूं',
+ 'मैं अभी बहुत खुश हूं',
+ 'मैं आज बहुत हाजिर हूं',
+ 'मैं वर्तमान बहुत खुश हूं',
+ 'मैं आज अत्यंत खुश हूं',
+ 'मैं सदैव बहुत खुश हूं']
+
+```
+
+`get_similar_sentences` returns `list` of length `no_of_variants` which contains sentences which
+ are similar to `sentence`
+
 #### Repositories containing models used in iNLTK
 |  Language | Repository                                                       | Perplexity of Language model | Wikipedia Articles Dataset |   Classification accuracy   |     Classification Kappa score    |                                                     Embeddings visualization on [Embedding projector](https://projector.tensorflow.org/)                                                     |
 |:---------:|------------------------------------------------------------------|:----------------------------:|:--------------------------:|:---------------------------:|:---------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
