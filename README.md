@@ -251,7 +251,7 @@ and [Maithili](https://github.com/goru001/inltk/issues/10) support
 * [By Vincent Boucher on LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:6517137647310241792/)
 * [By Kanimozhi](https://www.linkedin.com/feed/update/urn:li:activity:6517277916030701568), [By Soham](https://www.linkedin.com/feed/update/urn:li:activity:6513084638955696128), [By Imaad](https://www.linkedin.com/feed/update/urn:li:activity:6536258026687557632/) on LinkedIn
 * iNLTK was [trending on GitHub](https://github.motakasoft.com/trending/ranking/monthly/?d=2019-05-01&l=python&page=2) in May 2019
-* iNLTK has had [17,000+ Downloads](
+* iNLTK has had [19,000+ Downloads](
 https://console.cloud.google.com/bigquery?sq=375816891401:185fda81bdc64eb79b98c6b28c77a62a
 ) till Nov 2019
 
