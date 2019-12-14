@@ -236,7 +236,7 @@ Example:
 
 ### Contributing
 
-#### Add a new language support for iNLTK
+##### Add a new language support
 
 If you would like to add support for language of your own choice to iNLTK,
  please start with checking/raising a issue [here](https://github.com/goru001/inltk/issues)
@@ -244,14 +244,14 @@ If you would like to add support for language of your own choice to iNLTK,
 Please checkout the steps I'd [mentioned here for Telugu](https://github.com/goru001/inltk/issues/1)
 to begin with. They should be almost similar for other languages as well.
 
-#### Improving models/Using models for your own research
+##### Improving models/using models for your own research
 
 If you would like to take iNLTK's models and refine them with your own 
 dataset or build your own custom models on top of it, please check out the 
 repositories in the above table for the language of your choice. The repositories above 
 contain links to datasets, pretrained models, classifiers and all of the code for that.
 
-#### Add new functionality
+##### Add new functionality
 
 If you wish for a particular functionality in iNLTK - Start by checking/raising a issue [here](https://github.com/goru001/inltk/issues)
 

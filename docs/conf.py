@@ -23,9 +23,9 @@ copyright = '2019, Gaurav'
 author = 'Gaurav'
 
 # The short X.Y version
-version = '0.7'
+version = 'latest'
 # The full version, including alpha/beta/rc tags
-release = '0.7.2'
+release = 'latest'
 
 # -- General configuration ---------------------------------------------------
 
