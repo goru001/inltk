@@ -100,6 +100,3 @@ and [Maithili](https://github.com/goru001/inltk/issues/10) support
 * iNLTK has had [20,000+ Downloads](
 https://console.cloud.google.com/bigquery?sq=375816891401:185fda81bdc64eb79b98c6b28c77a62a
 ) on PyPi
-
-
-
