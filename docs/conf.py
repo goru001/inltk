@@ -23,7 +23,7 @@ copyright = '2019, Gaurav'
 author = 'Gaurav'
 
 # The short X.Y version
-version = 'latest'
+version = ''
 # The full version, including alpha/beta/rc tags
 release = 'latest'
 
