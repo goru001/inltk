@@ -42,6 +42,10 @@ setuptools.setup(
         "spacy>=2.0.18",
         "typing",
         'fastai==1.0.57',
-        "sentencepiece"
+        "sentencepiece",
+        "sphinx",
+        "commonmark",
+        "recommonmark",
+        "sphinx-markdown-tables"
     ],
 )
