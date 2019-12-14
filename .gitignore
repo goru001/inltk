@@ -6,3 +6,6 @@ inltk/models/*
 inltk/__pycache__
 inltk_test.ipynb
 .ipynb_checkpoints/*
+docs/_build
+docs/_static
+docs/_templates
