@@ -89,6 +89,7 @@ def get_embedding_vectors(input: str, language_code: str):
     path = Path(__file__).parent
     learn = load_learner(path / 'models' / f'{language_code}')
     encoder = get_model(learn.model)[0]
+    encoder.reset()
     embeddings = encoder.state_dict()['encoder.weight']
     embeddings = np.array(embeddings)
     embedding_vectors = []
@@ -105,8 +106,9 @@ def get_sentence_encoding(input: str, language_code: str):
     defaults.device = torch.device('cpu')
     path = Path(__file__).parent
     learn = load_learner(path / 'models' / f'{language_code}')
-    m = learn.model
-    kk0 = m[0](Tensor([token_ids]).to(torch.int64))
+    encoder = learn.model[0]
+    encoder.reset()
+    kk0 = encoder(Tensor([token_ids]).to(torch.int64))
     return np.array(kk0[0][-1][0][-1])
 
 
@@ -128,6 +130,7 @@ def get_similar_sentences(sen: str, no_of_variations: int, language_code: str):
     path = Path(__file__).parent
     learn = load_learner(path / 'models' / f'{language_code}')
     encoder = get_model(learn.model)[0]
+    encoder.reset()
     embeddings = encoder.state_dict()['encoder.weight']
     embeddings = np.array(embeddings)
     # cos similarity of vectors
