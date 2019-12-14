@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="inltk",
-    version="0.7.2",
+    version="0.7.4",
     author="Gaurav",
     author_email="contactgauravforwork@gmail.com",
     description="Natural Language Toolkit for Indian Languages (iNLTK)",
@@ -42,10 +42,6 @@ setuptools.setup(
         "spacy>=2.0.18",
         "typing",
         'fastai==1.0.57',
-        "sentencepiece",
-        "sphinx",
-        "commonmark",
-        "recommonmark",
-        "sphinx-markdown-tables"
+        "sentencepiece"
     ],
 )
