@@ -31,6 +31,7 @@ The first command above will install pytorch for cpu, which, as the name suggest
 |  Bengali |  bn  |
 |   Tamil  |  ta  |
 |   Urdu  |  ur  |
+|   English  |  en  |
 
 ### API
 
@@ -229,6 +230,8 @@ Example:
 |  Bengali  |   [NLP for Bengali](https://github.com/goru001/nlp-for-bengali)  |                                                          [Bengali Wikipedia Articles](https://www.kaggle.com/disisbig/bengali-wikipedia-articles)                                                          |           41.2          |              39.3              |                                                           [Bengali News Dataset](https://www.kaggle.com/disisbig/bengali-news-dataset)                                                           |           93.8          |             92             |   [Bengali Embeddings projection](https://projector.tensorflow.org/?config=https://raw.githubusercontent.com/goru001/nlp-for-bengali/master/language-model/embedding_projector_config.json)  |   [Bengali Embeddings projection](https://projector.tensorflow.org/?config=https://raw.githubusercontent.com/goru001/nlp-for-bengali/master/language-model/embedding_projector_transformer_config.json)  |
 |   Tamil   |     [NLP for Tamil](https://github.com/goru001/nlp-for-tamil)    |                                                            [Tamil Wikipedia Articles](https://www.kaggle.com/disisbig/tamil-wikipedia-articles)                                                            |          19.80          |              17.22             |                                                             [Tamil News Dataset](https://www.kaggle.com/disisbig/tamil-news-dataset)                                                             |          96.78          |            95.09           |     [Tamil Embeddings projection](https://projector.tensorflow.org/?config=https://raw.githubusercontent.com/goru001/nlp-for-tamil/master/language-model/embedding_projector_config.json)    |     [Tamil Embeddings projection](https://projector.tensorflow.org/?config=https://raw.githubusercontent.com/goru001/nlp-for-tamil/master/language-model/embedding_projector_transformer_config.json)    |
 |    Urdu   |    [NLP for Urdu](https://github.com/anuragshas/nlp-for-urdu)    |                                                             [Urdu Wikipedia Articles](https://www.kaggle.com/disisbig/urdu-wikipedia-articles)                                                             |          13.19          |              12.55             |                                                              [Urdu News Dataset](https://www.kaggle.com/disisbig/urdu-news-dataset)                                                              |          95.28          |            91.58           |    [Urdu Embeddings projection](https://projector.tensorflow.org/?config=https://raw.githubusercontent.com/anuragshas/nlp-for-urdu/master/language-model/embedding_projector_config.json)    |    [Urdu Embeddings projection](https://projector.tensorflow.org/?config=https://raw.githubusercontent.com/anuragshas/nlp-for-urdu/master/language-model/embedding_projector_transformer_config.json)    |
+
+Note: English model has been directly taken from [fast.ai](https://github.com/fastai/fastai)
 
 
 
