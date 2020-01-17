@@ -35,7 +35,10 @@ class EnglishTokenizer(BaseTokenizer):
         self.tok = SpacyTokenizer(lang)
 
     def tokenizer(self, t: str) -> List[str]:
-        return self.tok.tokenizer(t)
+        tok = Tokenizer()
+        tokens = tok.process_text(t, self.tok)
+        tokens = [token for token in tokens if token not in defaults.text_spec_tok]
+        return tokens
 
     def numericalize(self, t: str):
         token_ids = self.tokenizer(t)
