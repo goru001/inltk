@@ -1,5 +1,7 @@
 import asyncio
+import random
 from math import ceil
+from sklearn.metrics.pairwise import cosine_similarity
 
 from fastai.text import *
 from inltk.config import LanguageCodes
@@ -90,6 +92,7 @@ def get_embedding_vectors(input: str, language_code: str):
     path = Path(__file__).parent
     learn = load_learner(path / 'models' / f'{language_code}')
     encoder = get_model(learn.model)[0]
+    encoder.reset()
     embeddings = encoder.state_dict()['encoder.weight']
     embeddings = np.array(embeddings)
     embedding_vectors = []
@@ -106,9 +109,9 @@ def get_sentence_encoding(input: str, language_code: str):
     defaults.device = torch.device('cpu')
     path = Path(__file__).parent
     learn = load_learner(path / 'models' / f'{language_code}')
-    awd_lstm = learn.model[0]
-    awd_lstm.reset()
-    kk0 = awd_lstm(Tensor([token_ids]).to(torch.int64))
+    encoder = learn.model[0]
+    encoder.reset()
+    kk0 = encoder(Tensor([token_ids]).to(torch.int64))
     return np.array(kk0[0][-1][0][-1])
 
 
@@ -119,7 +122,8 @@ def get_sentence_similarity(sen1: str, sen2: str, language_code: str, cmp: Calla
     return cmp(enc1, enc2)
 
 
-def get_similar_sentences(sen: str, no_of_variations: int, language_code: str):
+def get_similar_sentences(sen: str, no_of_variations: int, language_code: str, degree_of_aug: float = 0.1):
+    check_input_language(language_code)
     # get embedding vectors for sen
     tok = LanguageTokenizer(language_code)
     token_ids = tok.numericalize(sen)
@@ -129,22 +133,30 @@ def get_similar_sentences(sen: str, no_of_variations: int, language_code: str):
     path = Path(__file__).parent
     learn = load_learner(path / 'models' / f'{language_code}')
     encoder = get_model(learn.model)[0]
+    encoder.reset()
     embeddings = encoder.state_dict()['encoder.weight']
     embeddings = np.array(embeddings)
     # cos similarity of vectors
-    scores = []
-    for word_vec in embedding_vectors:
-        scores.append([cos_sim(word_vec, embdg) for embdg in embeddings])
-    word_ids = [np.argpartition(-np.array(score), no_of_variations)[:no_of_variations] for score in scores]
-    new_token_ids = []
+    scores = cosine_similarity(embedding_vectors,embeddings)
+    word_ids = [np.argpartition(-np.array(score), no_of_variations+1)[:no_of_variations+1] for score in scores]
+    word_ids = [ids.tolist() for ids in word_ids]
+    for i, ids in enumerate(word_ids):
+        word_ids[i].remove(token_ids[i])
     # generating more variations than required so that we can then filter out the best ones
-    no_of_vars_per_token = ceil(no_of_variations/len(token_ids))*3
-    for i in range(len(token_ids)):
-        word_ids_list = word_ids[i].tolist()
-        word_ids_list.remove(token_ids[i])
-        for j in range(no_of_vars_per_token):
-            new_token_ids.append(token_ids[:i] + word_ids_list[j:j+1] + token_ids[i+1:])
-    new_sens = [tok.textify(tok_id) for tok_id in new_token_ids]
+    buffer_multiplicity = 2
+    new_sen_tokens = []
+    for i in range(no_of_variations):
+        for k in range(buffer_multiplicity):
+            new_token_ids = []
+            ids = sorted(random.sample(range(len(token_ids)), max(1, int(degree_of_aug * len(token_ids)))))
+            for j in range(len(token_ids)):
+                if j in ids:
+                    new_token_ids.append(word_ids[j][(i + k) % len(word_ids[j])])
+                else:
+                    new_token_ids.append(token_ids[j])
+            new_token_ids = list(map(lambda x: int(x), new_token_ids))
+            new_sen_tokens.append(new_token_ids)
+    new_sens = [tok.textify(sen_tokens) for sen_tokens in new_sen_tokens]
     while sen in new_sens:
         new_sens.remove(sen)
     sen_with_sim_score = [(new_sen, get_sentence_similarity(sen, new_sen, language_code)) for new_sen in new_sens]
