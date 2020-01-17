@@ -8,7 +8,7 @@ from inltk.config import LanguageCodes
 from inltk.download_assets import setup_language, verify_language, check_all_languages_identifying_model
 from inltk.tokenizer import LanguageTokenizer
 from inltk.const import tokenizer_special_cases
-from inltk.utils import cos_sim, reset_models
+from inltk.utils import cos_sim, reset_models, is_english
 
 lcodes = LanguageCodes()
 all_language_codes = lcodes.get_all_language_codes()
@@ -60,6 +60,8 @@ def tokenize(input: str, language_code: str):
 
 
 def identify_language(input: str):
+    if is_english(input):
+        return 'en'
     asyncio.set_event_loop(asyncio.new_event_loop())
     loop = asyncio.get_event_loop()
     tasks = [asyncio.ensure_future(check_all_languages_identifying_model())]

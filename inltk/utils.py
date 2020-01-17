@@ -10,3 +10,12 @@ def reset_models(folder_name: str):
     path = Path(__file__).parent
     shutil.rmtree(path / 'models' / f'{folder_name}')
     return
+
+
+def is_english(s: str) -> bool:
+    try:
+        s.encode(encoding='utf-8').decode('ascii')
+    except UnicodeDecodeError:
+        return False
+    else:
+        return True
