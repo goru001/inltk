@@ -143,7 +143,7 @@ def get_similar_sentences(sen: str, no_of_variations: int, language_code: str, d
     word_ids = [np.argpartition(-np.array(score), no_of_variations+1)[:no_of_variations+1] for score in scores]
     word_ids = [ids.tolist() for ids in word_ids]
     for i, ids in enumerate(word_ids):
-        word_ids[i].remove(token_ids[i])
+        word_ids[i] = [wid for wid in word_ids[i] if wid != token_ids[i]]
     # generating more variations than required so that we can then filter out the best ones
     buffer_multiplicity = 2
     new_sen_tokens = []
