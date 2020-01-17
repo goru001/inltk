@@ -8,7 +8,7 @@ from inltk.config import LanguageCodes
 from inltk.download_assets import setup_language, verify_language, check_all_languages_identifying_model
 from inltk.tokenizer import LanguageTokenizer
 from inltk.const import tokenizer_special_cases
-from inltk.utils import cos_sim, reset_models
+from inltk.utils import cos_sim, reset_models, is_english
 
 lcodes = LanguageCodes()
 all_language_codes = lcodes.get_all_language_codes()
@@ -45,7 +45,8 @@ def predict_next_words(input: str, n_words: int, language_code: str, randomness=
     learn = load_learner(path / 'models' / f'{language_code}')
     output = learn.predict(input, n_words, randomness)
     # UTF-8 encoding takes care of both LTR and RTL languages
-    output = input + (''.join(output.replace(input, '').split(' '))).replace('▁', ' ')
+    if language_code != LanguageCodes.english:
+        output = input + (''.join(output.replace(input, '').split(' '))).replace('▁', ' ')
     for special_str in tokenizer_special_cases:
         output = output.replace(special_str, '\n')
     return output
@@ -59,6 +60,8 @@ def tokenize(input: str, language_code: str):
 
 
 def identify_language(input: str):
+    if is_english(input):
+        return 'en'
     asyncio.set_event_loop(asyncio.new_event_loop())
     loop = asyncio.get_event_loop()
     tasks = [asyncio.ensure_future(check_all_languages_identifying_model())]
