@@ -12,12 +12,13 @@ class LanguageCodes:
     tamil = 'ta'
     urdu = 'ur'
     english = 'en'
+    telugu = 'te'
 
     def get_all_language_codes(self):
         return [self.bengali, self.gujarati, self.hindi,
                 self.kannada, self.malyalam, self.marathi,
                 self.nepali, self.odia, self.panjabi,
-                self.sanskrit, self.tamil, self.urdu, self.english]
+                self.sanskrit, self.tamil, self.urdu, self.english, self.telugu]
 
 
 class LMConfigs:
@@ -35,7 +36,9 @@ class LMConfigs:
         all_language_codes.sanskrit: 'https://www.dropbox.com/s/4ay1by5ryz6k39l/sanskrit_export.pkl?raw=1',
         all_language_codes.tamil: 'https://www.dropbox.com/s/88klv70zl82u39b/export.pkl?raw=1',
         all_language_codes.urdu: 'https://www.dropbox.com/s/0ovetjk27np0fcz/urdu_export.pkl?raw=1',
-        all_language_codes.english: 'https://www.dropbox.com/s/fnzfz23tukv3aku/export.pkl?raw=1'
+        all_language_codes.english: 'https://www.dropbox.com/s/fnzfz23tukv3aku/export.pkl?raw=1',
+        all_language_codes.telugu: 'https://www.kaggleusercontent.com/kf/27942526/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..rNx33GoarVvu1RQ-Dp3NuQ.Gh-qF40LL9qz7z73yuTn8UR_b7UupW1LhIjoGtLzTkYf2omHfVav4LsnDN0NCSUjtHG0jpujvfVFKKv8iSUnat3UKH83W4uTajRKF1vOYncvlMwUQufogXDerYcSVA-8oIUA1xdgVWZJRjJpNAx04Q.JkoLigxFjWSvT-6wnMAGfg/export.pkl'
+
     }
     tokenizer_model_file_url = {
         all_language_codes.bengali: 'https://www.dropbox.com/s/29h7vqme1kb8pmw/bengali_lm.model?raw=1',
@@ -50,7 +53,9 @@ class LMConfigs:
         all_language_codes.sanskrit: 'https://www.dropbox.com/s/e13401nsekulq17/tokenizer.model?raw=1',
         all_language_codes.tamil: 'https://www.dropbox.com/s/jpg4kaqyfb71g1v/tokenizer.model?raw=1',
         all_language_codes.urdu: 'https://www.dropbox.com/s/m5l1yy41ij6vwxa/urdu_lm.model?raw=1',
-        all_language_codes.english: 'https://www.dropbox.com/s/2u3greusrnyh7qy/vocab.pkl?raw=1'
+        all_language_codes.english: 'https://www.dropbox.com/s/2u3greusrnyh7qy/vocab.pkl?raw=1',
+        all_language_codes.telugu: 'https://www.kaggleusercontent.com/kf/26479363/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..cjdnZbQWnFX9l4jnDA_1sA.DGkJcw8S-ae_tG6imXVokeuZ_jOZ2O_jLRBFCowBtdw6nrz9Np2qIkKMMwUG6F4oK7XgbqidqwCiqbd5Tdy0kcuKagL4QQ34Vm_vX-WvToCjvXEHi5Y_Rp2lfuy-X15bxPXU5FQPIWWJ1n_CuQpg4JKdEDgtr_KTHPCIX9qQNh8.e2WmmWzm5eArt7p5v6EQ_Q/telugu_tok.model'
+
     }
 
     def __init__(self, language_code: str):
