@@ -42,7 +42,7 @@ class LMConfigs:
         all_language_codes.gujarati: 'https://www.dropbox.com/s/8ivj97gaprhq5pv/gujarati_lm.model?raw=1',
         all_language_codes.hindi: 'https://www.dropbox.com/s/xrsjt8zbhwo7zxq/hindi_lm.model?raw=1',
         all_language_codes.kannada: 'https://www.dropbox.com/s/m8qlc3wgw1m8ggp/kannada_lm.model?raw=1',
-        all_language_codes.malyalam: 'https://www.dropbox.com/s/2lqbb93tzz8vb8a/malyalam_lm.model?raw=1',
+        all_language_codes.malyalam: 'https://www.dropbox.com/s/97b1d2d0i7mv84c/malyalam_lm_90k.model?dl=0',
         all_language_codes.marathi: 'https://www.dropbox.com/s/nnq9erkr9z49th7/marathi_lm.model?raw=1',
         all_language_codes.nepali: 'https://www.dropbox.com/s/kmpc8i3c3n0if23/nepali_lm.model?raw=1',
         all_language_codes.odia: 'https://www.dropbox.com/s/1xnibv1sytgt9ci/oriya_lm.model?raw=1',
