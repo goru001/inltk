@@ -141,6 +141,6 @@ class UrduTokenizer(LanguageTokenizer):
         LanguageTokenizer.__init__(self, lang)
 
 
-class TeleguTokenizer(LanguageTokenizer):
+class TeluguTokenizer(LanguageTokenizer):
     def __init__(self, lang: str):
         LanguageTokenizer.__init__(self, lang)
