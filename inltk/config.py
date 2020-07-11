@@ -37,7 +37,7 @@ class LMConfigs:
         all_language_codes.tamil: 'https://www.dropbox.com/s/88klv70zl82u39b/export.pkl?raw=1',
         all_language_codes.urdu: 'https://www.dropbox.com/s/0ovetjk27np0fcz/urdu_export.pkl?raw=1',
         all_language_codes.english: 'https://www.dropbox.com/s/fnzfz23tukv3aku/export.pkl?raw=1',
-        all_language_codes.telugu: 'https://www.dropbox.com/s/cpkprx5bescxtap/export.pkl?raw=1'
+        all_language_codes.telugu: 'https://www.dropbox.com/s/cpkprx5bescxtap/export.pkl?raw=1
     }
     tokenizer_model_file_url = {
         all_language_codes.bengali: 'https://www.dropbox.com/s/29h7vqme1kb8pmw/bengali_lm.model?raw=1',
