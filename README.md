@@ -5,6 +5,7 @@
 iNLTK aims to provide out of the box support for various NLP tasks 
 that an application developer might need for Indic languages.
 
+iNLTK contains State-Of-The-Art pre-trained Transformer Models & Tokenizers for Indic Languages.
 
 ### Documentation
 
@@ -29,8 +30,33 @@ Checkout detailed docs along with Installation instructions
 |   Tamil  |  ta  |
 |   Urdu  |  ur  |
 |   English  |  en  |
+ 
+### State-Of-The-Art Transformer Models
+More information at [rhn19/indic-LM](https://github.com/rhn19/indic-LM/)
 
-#### Repositories containing models used in iNLTK
+<table style="width:100%">
+  <tr>
+    <th>Language</th>
+    <th>Model Architecture</th>
+    <th>Perplexity</th>
+    <th>IndicNLP News (Accuracy/ Kappa)</th>
+    <th>Public Classification Datasets (Accuracy/Kappa)</th>
+    <th>PyTorch model</th>
+    <th>Tensorboard Logs</th>
+  </tr>
+  <tr>
+    <td rowspan="2" align="center" valign="center">Marathi (mr)</td>
+    <td align="center" valign="center">ALBERT-base-v2-550K</td>
+    <td align="center" valign="center">37.06</td>
+    <td align="center" valign="center">0.96/ 0.93</td>
+    <td align="center" valign="center">iNLTK Headlines<br>0.94/ 0.89</td>
+    <td align="center" valign="center"><a href="https://drive.google.com/drive/folders/1KBJfA5ffsHbar4pIfVKGWLThOD_NHmuz?usp=sharing">Checkpoint</a></td>
+    <td align="center" valign="center"><a href="https://tensorboard.dev/experiment/qLz6zcKoTQesQQAO33L9SA/">Logs</a></td>
+  </tr>
+</table>
+
+
+### Repositories containing models used in iNLTK
 
 |  Language |                            Repository                            |                                                                                     Dataset used for Language modeling                                                                                     | Perplexity of ULMFiT LM<br>(on validation set) | Perplexity of TransformerXL LM<br>(on validation set) |                                                                                                                                                                                    Dataset used for Classification                                                                                                                                                                                    |  Classification:<br> Test set Accuracy  |     Classification: <br>Test set MCC    | Classification: Notebook<br>for Reproducibility                                                                                                                                                                                                                                                                                                                                                                                                  |                                                                                ULMFiT Embeddings visualization                                                                               |                                                                                  TransformerXL Embeddings visualization                                                                                  |
 |:---------:|:----------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------:|:-----------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------:|:---------------------------------------:|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
@@ -48,6 +74,12 @@ Checkout detailed docs along with Installation instructions
 |    Urdu   |    [NLP for Urdu](https://github.com/anuragshas/nlp-for-urdu)    |                                                             [Urdu Wikipedia Articles](https://www.kaggle.com/disisbig/urdu-wikipedia-articles)                                                             |                      13.19                     |                         12.55                         |                                                                                                                                                                 [Urdu News Dataset](https://www.kaggle.com/disisbig/urdu-news-dataset)                                                                                                                                                                |            95.28 (valid set)            |                                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                  |    [Urdu Embeddings projection](https://projector.tensorflow.org/?config=https://raw.githubusercontent.com/anuragshas/nlp-for-urdu/master/language-model/embedding_projector_config.json)    |    [Urdu Embeddings projection](https://projector.tensorflow.org/?config=https://raw.githubusercontent.com/anuragshas/nlp-for-urdu/master/language-model/embedding_projector_transformer_config.json)    |
 
 Note: English model has been directly taken from [fast.ai](https://github.com/fastai/fastai)
+
+### Tokenizers
+[Download](https://drive.google.com/drive/folders/1pMS4Y1mwCo4VZXzoEjq0_9VfXaexqfL7?usp=sharing)<br>
+Contains Tokenizers **(SentencePiece, WordPiece, ByteLevelBPE)** for the following languages : Marathi, Hindi, Punjabi, Bengali, Oria, Gujurati, Kannada, Telegu, Malayalam, Tamil
+
+More information at [rhn19/indic-LM](https://github.com/rhn19/indic-LM/)
 
 ### Contributing
 
