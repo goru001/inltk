@@ -18,16 +18,16 @@ Checkout detailed docs along with Installation instructions
 |:--------:|:----:|
 |   Hindi  |  hi  |
 |  Punjabi |  pa  |
-| Sanskrit |  sa  |
 | Gujarati |  gu  |
 |  Kannada |  kn  |
 | Malayalam |  ml  |
-|  Nepali  |  ne  |
-|   Odia   |  or  |
+|   Oriya   |  or  |
 |  Marathi |  mr  |
 |  Bengali |  bn  |
 |   Tamil  |  ta  |
 |   Urdu  |  ur  |
+|  Nepali  |  ne  |
+| Sanskrit |  sa  |
 |   English  |  en  |
 
 #### Repositories containing models used in iNLTK
@@ -48,6 +48,19 @@ Checkout detailed docs along with Installation instructions
 |    Urdu   |    [NLP for Urdu](https://github.com/anuragshas/nlp-for-urdu)    |                                                             [Urdu Wikipedia Articles](https://www.kaggle.com/disisbig/urdu-wikipedia-articles)                                                             |                      13.19                     |                         12.55                         |                                                                                                                                                                 [Urdu News Dataset](https://www.kaggle.com/disisbig/urdu-news-dataset)                                                                                                                                                                |            95.28 (valid set)            |                                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                  |    [Urdu Embeddings projection](https://projector.tensorflow.org/?config=https://raw.githubusercontent.com/anuragshas/nlp-for-urdu/master/language-model/embedding_projector_config.json)    |    [Urdu Embeddings projection](https://projector.tensorflow.org/?config=https://raw.githubusercontent.com/anuragshas/nlp-for-urdu/master/language-model/embedding_projector_transformer_config.json)    |
 
 Note: English model has been directly taken from [fast.ai](https://github.com/fastai/fastai)
+
+#### Effect of using Transfer Learning + Data-Augmentation from iNLTK
+
+|  Language |                            Repository                            |                                                       Dataset used for Classification                                                      | Results on using<br>complete training set | Percentage Decrease <br>in Training set size | Results on using<br>reduced training set<br>without Data Aug | Results on using<br>reduced training set<br>with Data Aug |
+|:---------:|:----------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------:|:--------------------------------------------:|:------------------------------------------------------------:|:---------------------------------------------------------:|
+|   Hindi   |     [NLP for Hindi](https://github.com/goru001/nlp-for-hindi)    |         [IIT Patna Movie Reviews](https://github.com/ai4bharat-indicnlp/indicnlp_corpus#publicly-available-classification-datasets)        |     Accuracy: 57.74<br><br>MCC: 37.23     |               80% (2480 -> 496)              |               Accuracy: 47.74<br><br>MCC: 20.50              |             Accuracy: 56.13<br><br>MCC: 34.39             |
+|  Bengali  |   [NLP for Bengali](https://github.com/goru001/nlp-for-bengali)  | [Bengali News Articles (Soham Articles)](https://github.com/ai4bharat-indicnlp/indicnlp_corpus#publicly-available-classification-datasets) |     Accuracy: 90.71<br><br>MCC: 87.92     |              99% (11284 -> 112)              |               Accuracy: 69.88<br><br>MCC: 61.56              |             Accuracy: 74.06<br><br>MCC: 65.08             |
+|  Gujarati |  [NLP for Gujarati](https://github.com/goru001/nlp-for-gujarati) |    [iNLTK Headlines Corpus - Gujarati](https://github.com/ai4bharat-indicnlp/indicnlp_corpus#publicly-available-classification-datasets)   |     Accuracy: 91.05<br><br>MCC: 86.09     |               90% (5269 -> 526)              |               Accuracy: 80.88<br><br>MCC: 70.18              |             Accuracy: 81.03<br><br>MCC: 70.44             |
+| Malayalam | [NLP for Malayalam](https://github.com/goru001/nlp-for-malyalam) |   [iNLTK Headlines Corpus - Malayalam](https://github.com/ai4bharat-indicnlp/indicnlp_corpus#publicly-available-classification-datasets)   |     Accuracy: 95.56<br><br>MCC: 93.29     |               90% (5036 -> 503)              |               Accuracy: 82.38<br><br>MCC: 73.47              |             Accuracy: 84.29<br><br>MCC: 76.36             |
+|  Marathi  |   [NLP for Marathi](https://github.com/goru001/nlp-for-marathi)  |    [iNLTK Headlines Corpus - Marathi](https://github.com/ai4bharat-indicnlp/indicnlp_corpus#publicly-available-classification-datasets)    |     Accuracy: 92.40<br><br>MCC: 85.23     |               95% (9672 -> 483)              |               Accuracy: 84.13<br><br>MCC: 68.59              |             Accuracy: 84.55<br><br>MCC: 69.11             |
+|   Tamil   |     [NLP for Tamil](https://github.com/goru001/nlp-for-tamil)    |     [iNLTK Headlines Corpus - Tamil](https://github.com/ai4bharat-indicnlp/indicnlp_corpus#publicly-available-classification-datasets)     |     Accuracy: 95.22<br><br>MCC: 92.70     |               95% (5346 -> 267)              |               Accuracy: 86.25<br><br>MCC: 79.42              |             Accuracy: 89.84<br><br>MCC: 84.63             |
+
+For more details around implementation or to reproduce results, checkout respective repositories. 
 
 ### Contributing
 
