@@ -110,6 +110,6 @@ and [Maithili](https://github.com/goru001/inltk/issues/10) support
 
 * [By Jeremy Howard on Twitter](https://twitter.com/jeremyphoward/status/1111318198891110402)
 * [By Sebastian Ruder on Twitter](https://twitter.com/seb_ruder/status/1207074241830674438)
-* [By Vincent Boucher on LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:6517137647310241792/)
-* [By Kanimozhi](https://www.linkedin.com/feed/update/urn:li:activity:6517277916030701568), [By Soham](https://www.linkedin.com/feed/update/urn:li:activity:6513084638955696128), [By Imaad](https://www.linkedin.com/feed/update/urn:li:activity:6536258026687557632/) on LinkedIn
+* [By Vincent Boucher](https://www.linkedin.com/feed/update/urn:li:activity:6517137647310241792/), [By Philip Vollet](https://www.linkedin.com/posts/philipvollet_machinelearning-datascience-nlp-activity-6698220942910468096-phA-), [By Steve Nouri](https://www.linkedin.com/posts/stevenouri_india-artificialintelligence-technology-activity-6698815315498868736-vYmZ) on [LinkedIn](https://www.linkedin.com/search/results/content/?keywords=inltk)
+* [By Kanimozhi](https://www.linkedin.com/feed/update/urn:li:activity:6517277916030701568), [By Soham](https://www.linkedin.com/feed/update/urn:li:activity:6513084638955696128), [By Imaad](https://www.linkedin.com/feed/update/urn:li:activity:6536258026687557632/) on [LinkedIn](https://www.linkedin.com/search/results/content/?keywords=inltk)
 * iNLTK was [trending on GitHub](https://github.motakasoft.com/trending/ranking/monthly/?d=2019-05-01&l=python&page=2) in May 2019
