@@ -117,7 +117,7 @@ and [Maithili](https://github.com/goru001/inltk/issues/10) support
 
 ### Citation
 
-If you use this library in your research, please consider citing citing:
+If you use this library in your research, please consider citing:
 
 ```latex
 @misc{arora2020inltk,
