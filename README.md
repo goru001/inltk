@@ -3,7 +3,7 @@
 [![Gitter](https://badges.gitter.im/inltk/community.svg)](https://gitter.im/inltk/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) [![Downloads](https://pepy.tech/badge/inltk)](https://pepy.tech/project/inltk)
 
 iNLTK aims to provide out of the box support for various NLP tasks 
-that an application developer might need for Indic languages.
+that an application developer might need for Indic languages. Paper for iNLTK library has been accepted at EMNLP-2020's NLP-OSS workshop. Here's the [preprint for the paper](https://arxiv.org/abs/2009.12534)
 
 
 ### Documentation
@@ -113,3 +113,19 @@ and [Maithili](https://github.com/goru001/inltk/issues/10) support
 * [By Vincent Boucher](https://www.linkedin.com/feed/update/urn:li:activity:6517137647310241792/), [By Philip Vollet](https://www.linkedin.com/posts/philipvollet_machinelearning-datascience-nlp-activity-6698220942910468096-phA-), [By Steve Nouri](https://www.linkedin.com/posts/stevenouri_india-artificialintelligence-technology-activity-6698815315498868736-vYmZ) on [LinkedIn](https://www.linkedin.com/search/results/content/?keywords=inltk)
 * [By Kanimozhi](https://www.linkedin.com/feed/update/urn:li:activity:6517277916030701568), [By Soham](https://www.linkedin.com/feed/update/urn:li:activity:6513084638955696128), [By Imaad](https://www.linkedin.com/feed/update/urn:li:activity:6536258026687557632/) on [LinkedIn](https://www.linkedin.com/search/results/content/?keywords=inltk)
 * iNLTK was [trending on GitHub](https://github.motakasoft.com/trending/ranking/monthly/?d=2019-05-01&l=python&page=2) in May 2019
+
+
+### Citation
+
+If you use this library in your research, please consider citing citing:
+
+```latex
+@misc{arora2020inltk,
+      title={iNLTK: Natural Language Toolkit for Indic Languages}, 
+      author={Gaurav Arora},
+      year={2020},
+      eprint={2009.12534},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
