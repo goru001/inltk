@@ -3,6 +3,7 @@ import sentencepiece as spm
 from pathlib import Path
 
 from inltk.config import LanguageCodes
+from inltk.utils import handle_all_caps, handle_upper_case_first_letter, lower_case_everything
 
 path = Path(__file__).parent
 
@@ -76,6 +77,7 @@ class IndicTokenizer(BaseTokenizer):
             local_pieces.append(self.sp.IdToPiece(i))
         return local_pieces
 
+
 class AllLanguageTokenizer(LanguageTokenizer):
     def __init__(self, lang: str):
         LanguageTokenizer.__init__(self, lang)
@@ -143,4 +145,23 @@ class UrduTokenizer(LanguageTokenizer):
 
 class TeluguTokenizer(LanguageTokenizer):
     def __init__(self, lang: str):
+        LanguageTokenizer.__init__(self, lang)
+
+
+class HinglishTokenizer(LanguageTokenizer):
+    def __init__(self, lang: str):
+        LanguageTokenizer.__init__(self, lang)
+
+
+class TanglishTokenizer(LanguageTokenizer):
+    def __init__(self, lang: str):
+        # because of some bug in fastai -- need to dive in further
+        lang = LanguageCodes.tanglish
+        LanguageTokenizer.__init__(self, lang)
+
+
+class ManglishTokenizer(LanguageTokenizer):
+    def __init__(self, lang: str):
+        # because of some bug in fastai -- need to dive in further
+        lang = LanguageCodes.manglish
         LanguageTokenizer.__init__(self, lang)

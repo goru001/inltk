@@ -13,12 +13,17 @@ class LanguageCodes:
     urdu = 'ur'
     english = 'en'
     telugu = 'te'
+    # Code-Mixed Languages in Latin script
+    hinglish = 'hi-en'
+    tanglish = 'ta-en'
+    manglish = 'ml-en'
 
     def get_all_language_codes(self):
         return [self.bengali, self.gujarati, self.hindi,
                 self.kannada, self.malyalam, self.marathi,
                 self.nepali, self.odia, self.panjabi,
-                self.sanskrit, self.tamil, self.urdu, self.english, self.telugu]
+                self.sanskrit, self.tamil, self.urdu, self.english, self.telugu,
+                self.hinglish, self.tanglish, self.manglish]
 
 
 class LMConfigs:
@@ -37,7 +42,10 @@ class LMConfigs:
         all_language_codes.tamil: 'https://www.dropbox.com/s/88klv70zl82u39b/export.pkl?raw=1',
         all_language_codes.urdu: 'https://www.dropbox.com/s/0ovetjk27np0fcz/urdu_export.pkl?raw=1',
         all_language_codes.english: 'https://www.dropbox.com/s/fnzfz23tukv3aku/export.pkl?raw=1',
-        all_language_codes.telugu: 'https://www.dropbox.com/s/cpkprx5bescxtap/export.pkl?raw=1'
+        all_language_codes.telugu: 'https://www.dropbox.com/s/fjo9u4orj7dqmq1/export.pkl?raw=1',
+        all_language_codes.hinglish: 'https://www.dropbox.com/s/8neihsc8r21jz64/export.pkl?raw=1',
+        all_language_codes.tanglish: 'https://www.dropbox.com/s/2xjhwtaepm157vt/export.pkl?raw=1',
+        all_language_codes.manglish: 'https://www.dropbox.com/s/d0jn6g4422pq5kv/export.pkl?raw=1'
     }
     tokenizer_model_file_url = {
         all_language_codes.bengali: 'https://www.dropbox.com/s/29h7vqme1kb8pmw/bengali_lm.model?raw=1',
@@ -53,7 +61,10 @@ class LMConfigs:
         all_language_codes.tamil: 'https://www.dropbox.com/s/jpg4kaqyfb71g1v/tokenizer.model?raw=1',
         all_language_codes.urdu: 'https://www.dropbox.com/s/m5l1yy41ij6vwxa/urdu_lm.model?raw=1',
         all_language_codes.english: 'https://www.dropbox.com/s/2u3greusrnyh7qy/vocab.pkl?raw=1',
-        all_language_codes.telugu: 'https://www.dropbox.com/s/hcufsc4blm37gua/tokenizer.model?raw=1'
+        all_language_codes.telugu: 'https://www.dropbox.com/s/r4lrxhxiqfzject/tokenizer.model?raw=1',
+        all_language_codes.hinglish: 'https://www.dropbox.com/s/oblv8oalv5lwdec/tokenizer.model?raw=1',
+        all_language_codes.tanglish: 'https://www.dropbox.com/s/wgsv87tx0rhqx95/tokenizer.model?raw=1',
+        all_language_codes.manglish: 'https://www.dropbox.com/s/877ogp4qu3kf05v/tokenizer.model?raw=1'
     }
 
     def __init__(self, language_code: str):
