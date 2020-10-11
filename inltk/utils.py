@@ -19,3 +19,19 @@ def is_english(s: str) -> bool:
         return False
     else:
         return True
+
+
+def handle_all_caps(t: str) -> str:
+    tokens = t.split()
+    tokens = replace_all_caps(tokens)
+    return ' '.join(tokens)
+
+
+def handle_upper_case_first_letter(t: str) -> str:
+    tokens = t.split()
+    tokens = deal_caps(tokens)
+    return ' '.join(tokens)
+
+
+def lower_case_everything(t: str) -> str:
+    return t.lower()

@@ -1,3 +1,5 @@
+import sys
+import warnings
 import asyncio
 import random
 from math import ceil
@@ -9,6 +11,9 @@ from inltk.download_assets import setup_language, verify_language, check_all_lan
 from inltk.tokenizer import LanguageTokenizer
 from inltk.const import tokenizer_special_cases
 from inltk.utils import cos_sim, reset_models, is_english
+
+if not sys.warnoptions:
+    warnings.simplefilter("ignore")
 
 lcodes = LanguageCodes()
 all_language_codes = lcodes.get_all_language_codes()
