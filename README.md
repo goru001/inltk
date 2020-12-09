@@ -3,7 +3,7 @@
 [![Gitter](https://badges.gitter.im/inltk/community.svg)](https://gitter.im/inltk/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) [![Downloads](https://pepy.tech/badge/inltk)](https://pepy.tech/project/inltk)
 
 iNLTK aims to provide out of the box support for various NLP tasks 
-that an application developer might need for Indic languages. Paper for iNLTK library has been accepted at EMNLP-2020's NLP-OSS workshop. Here's the [preprint for the paper](https://arxiv.org/abs/2009.12534)
+that an application developer might need for Indic languages. Paper for iNLTK library has been accepted at EMNLP-2020's NLP-OSS workshop. Here's the [link to the paper](https://www.aclweb.org/anthology/2020.nlposs-1.10/)
 
 
 ### Documentation
