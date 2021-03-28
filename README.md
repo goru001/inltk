@@ -135,12 +135,17 @@ If you wish for a particular functionality in iNLTK - Start by checking/raising 
 If you use this library in your research, please consider citing:
 
 ```latex
-@misc{arora2020inltk,
-      title={iNLTK: Natural Language Toolkit for Indic Languages}, 
-      author={Gaurav Arora},
-      year={2020},
-      eprint={2009.12534},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@inproceedings{arora-2020-inltk,
+    title = "i{NLTK}: Natural Language Toolkit for Indic Languages",
+    author = "Arora, Gaurav",
+    booktitle = "Proceedings of Second Workshop for NLP Open Source Software (NLP-OSS)",
+    month = nov,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.nlposs-1.10",
+    doi = "10.18653/v1/2020.nlposs-1.10",
+    pages = "66--71",
+    abstract = "We present iNLTK, an open-source NLP library consisting of pre-trained language models and out-of-the-box support for Data Augmentation, Textual Similarity, Sentence Embeddings, Word Embeddings, Tokenization and Text Generation in 13 Indic Languages. By using pre-trained models from iNLTK for text classification on publicly available datasets, we significantly outperform previously reported results. On these datasets, we also show that by using pre-trained models and data augmentation from iNLTK, we can achieve more than 95{\%} of the previous best performance by using less than 10{\%} of the training data. iNLTK is already being widely used by the community and has 40,000+ downloads, 600+ stars and 100+ forks on GitHub. The library is available at https://github.com/goru001/inltk.",
 }
 ```
