@@ -40,7 +40,7 @@ setuptools.setup(
         "requests",
         "scipy",
         "spacy>=2.0.18",
-        "typing",
+        "scikit-learn",
         'fastai==1.0.57',
         "sentencepiece"
     ],
