@@ -70,7 +70,7 @@ tokenize(text ,'<code-of-language>') // where text is string in <code-of-languag
 
 This returns an array of "Embedding vectors", containing 400 Dimensional representation for 
 every token in the text.
-
+In case of 'te' (Telugu language), the dimension is 410.
 
 ```
 from inltk.inltk import get_embedding_vectors
@@ -167,6 +167,7 @@ Example:
 `get_sentence_encoding` returns 400 dimensional encoding of the sentence from
 ULMFiT LM Encoder of `<code-of-language>` trained in repositories linked below.
 
+Only in case of 'te' (Telugu language), `get_sentence_encoding` returns 410 dimensional encoding of the sentence.
 
 #### Get Sentence Similarity
 
