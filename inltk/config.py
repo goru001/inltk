@@ -88,5 +88,7 @@ class AllLanguageConfig(object):
             'all_languages_identifying_model_url': 'https://www.dropbox.com/s/a06fa0zlr7bfif0/export.pkl?raw=1',
             'all_languages_identifying_tokenizer_name': 'tokenizer.model',
             'all_languages_identifying_tokenizer_url':
-                'https://www.dropbox.com/s/t4mypdd8aproj88/all_language.model?raw=1'
+                'https://www.dropbox.com/s/t4mypdd8aproj88/all_language.model?raw=1',
+            'codemixed_identifying_model_name': 'export.pkl',
+            'codemixed_identifying_model_url': 'https://www.dropbox.com/s/tlhnkbqffqb832a/export.pkl?raw=1'
         }

@@ -11,6 +11,8 @@ from inltk.download_assets import setup_language, verify_language, check_all_lan
 from inltk.tokenizer import LanguageTokenizer
 from inltk.const import tokenizer_special_cases
 from inltk.utils import cos_sim, reset_models, is_english
+from inltk.utils import *
+from inltk.codemixed_util import *
 
 if not sys.warnoptions:
     warnings.simplefilter("ignore")
@@ -56,17 +58,42 @@ def predict_next_words(input: str, n_words: int, language_code: str, randomness=
         output = output.replace(special_str, '\n')
     return output
 
+    tok = LanguageTokenizer(language_code)
 
 def tokenize(input: str, language_code: str):
     check_input_language(language_code)
-    tok = LanguageTokenizer(language_code)
     output = tok.tokenizer(input)
     return output
 
-
-def identify_language(input: str):
+def identify_codemixed(input: str):
+    asyncio.set_event_loop(asyncio.new_event_loop())
+    loop = asyncio.get_event_loop()
+    tasks = [asyncio.ensure_future(check_all_languages_identifying_model())]
+    done = loop.run_until_complete(asyncio.gather(*tasks))[0]
+    loop.close()
+    defaults.device = torch.device('cpu')
+    path = Path(__file__).parent
+    try:
+        learn = load_learner(path / 'models' / 'codemixed')
+        output = learn.predict(input)
+        map_dict = {
+            '1': 'en',
+            '2': 'hi-en',
+            '3': 'ta-en',
+            '4': 'ml-en'
+        }
+        return map_dict[str(output[0])]
+    except AttributeError:
+        print("Probably you haven't imported the required classes. Try running 'from inltk.codemixed_util import *'")
+        print()
+        raise
+        
+def identify_language(input: str, check_codemixed=False):
     if is_english(input):
-        return 'en'
+        if check_codemixed:
+            return identify_codemixed(input)
+        else:
+            return 'en'
     asyncio.set_event_loop(asyncio.new_event_loop())
     loop = asyncio.get_event_loop()
     tasks = [asyncio.ensure_future(check_all_languages_identifying_model())]
@@ -88,6 +115,7 @@ def remove_foreign_languages(input: str, host_language_code: str):
 
 def reset_language_identifying_models():
     reset_models('all')
+    reset_models('codemixed')
 
 
 def get_embedding_vectors(input: str, language_code: str):

@@ -46,10 +46,13 @@ def verify_language(language_code: str):
 async def check_all_languages_identifying_model():
     config = AllLanguageConfig.get_config()
     if (path/'models'/'all'/f'{config["all_languages_identifying_model_name"]}').exists() and \
-            (path/'models'/'all'/f'{config["all_languages_identifying_tokenizer_name"]}').exists():
+            (path/'models'/'all'/f'{config["all_languages_identifying_tokenizer_name"]}').exists() and \
+            (path/'models'/'codemixed'/f'{config["codemixed_identifying_model_name"]}').exists():
         return True
     done = await download_file(config["all_languages_identifying_model_url"], path/'models'/'all',
                         config["all_languages_identifying_model_name"])
+    done = await download_file(config["codemixed_identifying_model_url"], path/'models'/'codemixed',
+                        config["codemixed_identifying_model_name"])
     done = await download_file(config["all_languages_identifying_tokenizer_url"], path/'models'/'all',
                         config["all_languages_identifying_tokenizer_name"])
     return done
