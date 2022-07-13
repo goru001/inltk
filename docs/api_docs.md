@@ -1,8 +1,8 @@
 ### Installation
 
 ```bash
-pip install torch==1.3.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
 pip install inltk
+pip install torch==1.3.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
 ``` 
 
 Note: Just make sure to pick the correct torch wheel url, according to the needed 
