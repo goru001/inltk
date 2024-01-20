@@ -1,0 +1,6 @@
+unidecode
+torch
+requests
+tqdm
+stanza
+matplotlib
